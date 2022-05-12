@@ -2315,7 +2315,7 @@ if not msg.ControllerBot then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*- هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
 os.execute('rm -rf MooN.lua')
-download('https://raw.githubusercontent.com/MoooNsource/MooN/main/MooN.lua','MooN.lua')
+download('https://raw.githubusercontent.com/mngff/mn/main/MooN.lua','MooN.lua')
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*- تم تحديث السورس * ',"md",true)  
 end
 if text == '『 تعطيل الاذاعه 』' or text == 'تعطيل الاذاعه' then
@@ -14590,7 +14590,6 @@ end
 
 luatele.run(CallBackLua)
  
-
 
 
 
