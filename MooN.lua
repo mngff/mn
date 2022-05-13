@@ -1463,11 +1463,9 @@ if text == "الغاء" then
 Redis:del(TheMooN.."MooN:Set:Link"..msg_chat_id..""..msg.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"📥︙تم الغاء حفظ الرابط","md",true)         
 end
-if text then     
 Redis:set(TheMooN.."MooN:Group:Link"..msg_chat_id,LinkGroup)
 Redis:del(TheMooN.."MooN:Set:Link"..msg_chat_id..""..msg.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"📥︙تم حفظ الرابط بنجاح","md",true)         
-end
 end 
 if Redis:get(TheMooN.."Tshake:Welcome:Group" .. msg_chat_id .. "" .. msg.sender.user_id) then 
 if text == "الغاء" then 
