@@ -1463,8 +1463,7 @@ if text == "الغاء" then
 Redis:del(TheMooN.."MooN:Set:Link"..msg_chat_id..""..msg.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"📥︙تم الغاء حفظ الرابط","md",true)         
 end
-if text and text:match("(https://telegram.me/%S+)") or text and text:match("(https://t.me/%S+)") then     
-local LinkGroup = text:match("(https://telegram.me/%S+)") or text:match("(https://t.me/%S+)")   
+if text then     
 Redis:set(TheMooN.."MooN:Group:Link"..msg_chat_id,LinkGroup)
 Redis:del(TheMooN.."MooN:Set:Link"..msg_chat_id..""..msg.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"📥︙تم حفظ الرابط بنجاح","md",true)         
